@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Layout from './containers/Layout/index'
+// import Layout from './containers/Layout/index'
+//import MyConditionalComponent from './components/MyConditionalComponent/index';
+// import FunctionalHooks from './components/FunctionalHooks/index'
+// import MyfunctionTodos from './components/FunctionalHooks/indexUseEffect';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import MyFirstClassComponent from './components/MyFirstClassComponent/';
+  class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {color: "red", isHere: false};
+    }
+    render() {
+      return (
+          <div>
+     
+{/*      
+             <MyFirstClassComponent /> */}
+             <Layout/>
+             {/* <MyConditionalComponent isVerified={this.state.isHere}/> */}
+         
+             {/* <FunctionalHooks/> */}
+             {/* <MyfunctionTodos/> */}
+          </div>
+      
+      )
+    }
+  }
+  
+  export default App;
 
-export default App;
+
+
+
+// import logo from './logo.svg';
+// import './App.css';
+// import MyFirstClassComponent from './components/MyFirstClassComponent/index';
+// import Layout from './containers/Layout/index'
+// // import ParentComponent from './containers/Layout';
+// {/* <ParentComponent /> */}
+// // Componet
+// function App() {
+//  const msg = "TRUE"
+//   return (
+//     <div className="App">
+   
+//       <MyFirstClassComponent />
+//       <Layout />
+
+
+//       {/* <MyFirstComponent wasClicked={msg}></MyFirstComponent> */}
+//     </div>
+//   );
+// }
+
+// export default App;
